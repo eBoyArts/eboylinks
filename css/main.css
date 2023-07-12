@@ -3,15 +3,16 @@
   src: url(Fontix-Regular.ttf);
 }
 
+@keyframes outline-bounce {
+  0%   {outline: 0px solid #f97070;}
+  75%   {outline: 5px solid #f97070;}
+  100%   {outline: 3px solid #f97070;}
+}
+
 a,
 a:focus {
   color: inherit;
   text-decoration: none;
-}
-
-a:hover {
-  background-color: #f97070;
-  color: #ff2;
 }
 
 html,
@@ -44,12 +45,20 @@ body {
 
 .button {
   display: block;
-  margin: 0;
   font-size: 1.5rem;
   line-height: 1.3em;
-  border: 3px solid;
   padding: 0.5rem 1rem;
+  border: 3px solid;
   margin: 1rem 0;
+}
+
+.button:hover {
+  border: 3px #f97070 solid;
+  color: #ff2;
+  background-color: #f97070;
+  outline: 3px solid #f97070;
+  animation-name: outline-bounce;
+  animation-duration: 0.2s;
 }
 
 .cardsbox {
@@ -82,7 +91,7 @@ ul {
   }
 }
 
-@media only screen and (min-device-width: 340px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .card {
     margin: 0.5rem 2rem 0.5rem 0;
   }
@@ -94,7 +103,6 @@ ul {
   }
 
   .card {
-    margin: 0.5rem 2rem 0.5rem 0;
     font-size: 0.9rem;
   }
 
