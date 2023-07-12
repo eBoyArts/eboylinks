@@ -4,10 +4,14 @@
 }
 
 a,
-a:focus,
-a:hover {
+a:focus {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  background-color: #f97070;
+  color: #ff2;
 }
 
 html,
